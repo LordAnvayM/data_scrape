@@ -1,0 +1,1158 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+
+
+
+
+
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; image-src https:*; child-src 'none';">-->
+  <meta property="og:site_name" content="Trendlyne.com">
+  
+    <meta charset="utf-8" name="description"
+        content='
+        "Welcome to Trendlyne. Sign in now to get latest updates on 
+        your interests, Stock Alerts, Portfolio and more"
+        '>
+
+
+  <title>Trendlyne login</title>
+
+  
+  
+    <link href='//cdnjs.cloudflare.com/' rel='preconnect' >
+  
+    <link href='//ajax.googleapis.com/' rel='preconnect' >
+  
+    <link href='//www.googletagmanager.com/' rel='preconnect' >
+  
+    <link href='//fonts.gstatic.com/' rel='preconnect' >
+  
+    <link href='//www.google-analytics.com/' rel='preconnect' >
+  
+    <link href='//trendlyne-media-mumbai-new.s3.amazonaws.com/' rel='preconnect' >
+  
+    <link href='//s3-ap-south-1.amazonaws.com/' rel='preconnect' >
+  
+    <link href='//cdn.datatables.net' rel='preconnect' >
+  
+    <link href='//fonts.googleapis.com' rel='preconnect' >
+  
+    <link href='https://cdn-static.trendlyne.com/static/' rel='preconnect' >
+  
+
+  
+  
+    <link href='//cdnjs.cloudflare.com/' rel='dns-prefetch' >
+  
+    <link href='//www.googletagmanager.com/' rel='dns-prefetch' >
+  
+    <link href='//www.google-analytics.com/' rel='dns-prefetch' >
+  
+    <link href='//trendlyne-media-mumbai-new.s3.amazonaws.com/' rel='dns-prefetch' >
+  
+    <link href='//s3-ap-south-1.amazonaws.com/' rel='dns-prefetch' >
+  
+    <link href='//cdn.datatables.net' rel='dns-prefetch' >
+  
+
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://cdn-static.trendlyne.com/static/favicons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://cdn-static.trendlyne.com/static/favicons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://cdn-static.trendlyne.com/static/favicons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://cdn-static.trendlyne.com/static/favicons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://cdn-static.trendlyne.com/static/favicons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://cdn-static.trendlyne.com/static/favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://cdn-static.trendlyne.com/static/favicons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://cdn-static.trendlyne.com/static/favicons/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="https://cdn-static.trendlyne.com/static/favicons/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="https://cdn-static.trendlyne.com/static/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="https://cdn-static.trendlyne.com/static/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="https://cdn-static.trendlyne.com/static/favicons/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="https://cdn-static.trendlyne.com/static/favicons/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;"/>
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="https://cdn-static.trendlyne.com/static/favicons/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="https://cdn-static.trendlyne.com/static/favicons/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="https://cdn-static.trendlyne.com/static/favicons/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="https://cdn-static.trendlyne.com/static/favicons/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="https://cdn-static.trendlyne.com/static/favicons/mstile-310x310.png" />
+
+  <link rel="preload" as="style" href='https://fonts.googleapis.com/css?family=Roboto:100,400,700,500|Droid+Sans:400,700|Lato:400,700,900&display=swap' />
+  <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:100,400,700,500|Droid+Sans:400,700|Lato:400,700,900&display=swap' />
+
+  <link rel="stylesheet" href="https://cdn-static.trendlyne.com/static/CACHE/css/output.5a6ba19a7ccd.css" type="text/css">
+
+  
+  
+
+  
+  
+
+    <link rel="stylesheet" href="https://cdn-static.trendlyne.com/static/CACHE/css/output.95ef6592a9b6.css" type="text/css">
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+  
+
+
+
+
+
+
+</head>
+<body class='
+    bggray-ededed
+'
+    data-disableajaxcache=""
+    
+>
+    <!-- Below script to include theme mode in the mobile webview e.g. #theme-dark -->
+<script>
+    (function(){
+        var hashId = window.location.hash;
+        if (hashId && hashId.startsWith('#theme-')) {
+            var theme = hashId.split('-')[1]; if (theme) document.body.classList.add("theme-mode", theme);
+        }
+    })()
+</script>
+
+
+<script>
+  var TrendlyneApp =  TrendlyneApp || {};
+  TrendlyneApp.shaon = false;
+  TrendlyneApp.galoaded = false;
+  TrendlyneApp.gaon = true;
+  TrendlyneApp.RE_CAPTCHA_KEY = "6LfbvMUqAAAAAM2r1dJN30bR11kvMpieISxyl8Pe";
+  TrendlyneApp.localsystem = false;
+  
+</script>
+
+
+
+
+
+<header><nav class="container-fluid"><div class="row " id="tl-navbar" ><div id="tl-navbar-big-menu" aria-label="Sub Navigation"></div><div id="tl-navbar-side-menu" aria-label="Sidebar"></div><div class="navbar navbar-inverse navbar-fixed-top tl-navbar nobdr m0 p0 side-nav-color "
+                role="navigation" id="tl-navbar-div" aria-label="Main Navigation"><div class="col-xl-9 col-lg-8 col-md-7 col-sm-2 col-xs-2 p-r-0 p-l-0"><div class="hidden-md-up p-x-0 tl-navbar-body "><div class="tl-navbar-brand navbar-brand hidden-md-up sidebar-left-menu-icon m-r-0 p-x-1 pointer mt05r" ><i class="sprite-side-menu sprite-side-menu-menu-icon"></i><i class="sprite-side-menu sprite-side-menu-close-icon hidden"></i></div></div><div class="hidden-sm-down p-x-0 tl-navbar-body "><ul id="navbarmoremenu" class="nav navbar-nav"><li class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link p-a-0"><a class="tl-navbar-brand navbar-brand hidden-sm-down sidebar-left-menu-name p-y-0 m-r-0 pl05rem pointer" 
+    href="https://trendlyne.com/features/"
+    style="max-width:21rem;"
+><img class="img-fluid" src='https://cdn-static.trendlyne.com/static/TL-logomark-v1.webp'
+         alt="Trendlyne logo"
+         height="34"
+         width="34"
+         style="height:34px; margin-top:10px;"
+         
+    ></a></li><li><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link   "
+                                    href="https://trendlyne.com/markets-today/"
+                                    data-toggle="collapse1" data-target="#marketsCollapsingNavbar"
+                                    aria-controls="marketsCollapsingNavbar" aria-expanded="false"
+                                    aria-label="Toggle navigation" data-parent="#tl-navbar" >
+                                    Markets
+                                </a></li><li><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link starfolio_subnavbar"
+                                    href="https://starfolio.trendlyne.com/"
+                                    target="_blank"
+                                    style="padding-bottom:0.8rem;">
+                                        Baskets
+                                    </a></li><li><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link "
+                                    href="https://trendlyne.com/alerts/portfolio-real-time-alerts/"
+                                    data-toggle="collapse1" data-target="#alertCollapsingNavbar"
+                                    aria-controls="alertCollapsingNavbar" aria-expanded="false"
+                                    aria-label="Toggle navigation" data-parent="#tl-navbar"
+                                >
+                                    Alerts
+                                </a></li><li class="hidden-md-down"><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link "
+                                        href="https://smartoptions.trendlyne.com/dashboard/options/?redirect_source=trendlyne-fno"
+                                        data-toggle="collapse1" data-target="#fnoCollapsingNavbar"
+                                        aria-controls="fnoCollapsingNavbar" aria-expanded="false"
+                                        aria-label="Toggle navigation" data-parent="#tl-navbar">
+                                        F&O
+                                    </a></li><li><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link "
+                                        href="https://trendlyne.com/mutual-fund/mf-all/?category=Multi-Cap&active=multicap"
+                                        data-toggle="collapse1" data-target="#mfCollapsingNavbar"
+                                        aria-controls="mfCollapsingNavbar" aria-expanded="false"
+                                        aria-label="Toggle navigation" data-parent="#tl-navbar"
+                                    >
+                                        MF
+                                    </a></li><li class="hidden-md-down"><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link "
+                                        href="https://trendlyne.com/research-reports/all/"
+                                        data-toggle="collapse1" data-target="#reportsCollapsingNavbar"
+                                        aria-controls="reportsCollapsingNavbar" aria-expanded="false"
+                                        aria-label="Toggle navigation" data-parent="#tl-navbar">
+                                        Reports
+                                    </a></li><li class="hidden-lg-down"><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link "
+                                    href="https://trendlyne.com/stock-screeners/by-type/"
+                                    data-toggle="collapse1" data-target="#screenerCollapsingNavbar"
+                                    aria-controls="screenerCollapsingNavbar" aria-expanded="false"
+                                    aria-label="Toggle navigation" data-parent="#tl-navbar"
+                                >
+                                    Screeners
+                                </a></li><li class="hidden-lg-down hiddenforenterprise"><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link fw500
+                                                        "
+                                    style="color:#ed9f40 !important;"
+                                    href="https://trendlyne.com/subscription/plans/"
+                                    data-parent="#tl-navbar"
+                                >
+                                    Subscribe
+                                </a></li><li style="hidden-lg-down"><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link "
+                                    href="https://trendlyne.com/portfolio/superstar-shareholders/index/"
+                                    data-toggle="collapse1" data-target="#superstarsCollapsingNavbar"
+                                    aria-controls="superstarsCollapsingNavbar" aria-expanded="false"
+                                    aria-label="Toggle navigation" data-parent="#tl-navbar"
+                                >
+                                    Superstars
+                                </a></li><li style="display:none;"><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link   "
+                                    href="https://trendlyne.com/portfolio/holdings/"
+                                    data-toggle="collapse1" data-target="#portfolioCollapsingNavbar"
+                                    aria-controls="portfolioCollapsingNavbar" aria-expanded="false"
+                                    aria-label="Toggle navigation" data-parent="#tl-navbar"
+                                >
+                                    Portfolio
+                                </a></li><li style="display:none;"><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link loginModal modal-trigger replace-url "
+                                    href="https://trendlyne.com/visitor/loginmodal.html?next=https://trendlyne.com/portfolio/show/Watchlist/default/"
+                                    data-url="https://trendlyne.com/portfolio/show/Watchlist/default/"
+                                    data-toggle="collapse1" data-target="#watchlistCollapsingNavbar"
+                                    aria-controls="watchlistCollapsingNavbar" aria-expanded="false"
+                                    aria-label="Toggle navigation" data-parent="#tl-navbar"
+                                >
+                                    Watchlist
+                                </a></li><li style="display:none;"><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link " 
+                                    href="https://trendlyne.com/equity/group-insider-trading-sast/"
+                                    data-url="https://trendlyne.com/equity/group-insider-trading-sast/"
+                                    data-toggle="collapse1" data-target="#trading_SAST_CollapsingNavbar"
+                                    aria-controls="trading_SAST_CollapsingNavbar" aria-expanded="false"
+                                    aria-label="Toggle navigation" data-parent="#tl-navbar"
+                                >
+                                    Insider Trades
+                                </a></li><li style="display:none;"><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link "
+                                    href="https://trendlyne.com/dashboard/results/industry/"
+                                    data-toggle="collapse1" data-target="#resultsCollapsingNavbar"
+                                    aria-controls="resultsCollapsingNavbar" aria-expanded="false"
+                                    aria-label="Toggle navigation" data-parent="#tl-navbar"
+                                >
+                                    Results
+                                </a></li><li style="display:none;"><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link"
+                                    href="https://trendlyne.com/tools/data-downloader/stock-data-downloader/"
+                                    aria-label="Toggle navigation" data-parent="#tl-navbar"
+                                    >
+                                    Data Downloader
+                                </a></li><li style="display:none;"><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link "
+                                    href="https://trendlyne.com/equity/calendar/all/all/"
+                                    data-toggle="collapse1" data-target="#eventscalendar"
+                                    aria-controls="eventscalendar" aria-expanded="false"
+                                    aria-label="Toggle navigation" data-parent="#tl-navbar"
+                                    >
+                                    Events Calendar
+                                </a></li><li style="display:none;"><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link "
+                                        href="https://trendlyne.com/faq/articles/84000392527-what-s-new-at-trendlyne-"
+                                        data-toggle="collapse1" data-target="#whatsnewCollapsingNavbar"
+                                        aria-controls="whatsnewCollapsingNavbar" aria-expanded="false"
+                                        aria-label="Toggle navigation" data-parent="#tl-navbar"
+                                        >
+                                        What's New
+                                    </a></li><li style="display:none;"><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link "
+                                    href="https://trendlyne.com/features/"
+                                    data-toggle="collapse1" data-target="#exploreCollapsingNavbar"
+                                    aria-controls="exploreCollapsingNavbar" aria-expanded="false"
+                                    aria-label="Toggle navigation" data-parent="#tl-navbar"
+                                    >
+                                    Explore
+                                </a></li><li style="display:none;"><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link"
+                                    href="https://trendlyne.com/faq/"
+                                    aria-label="Toggle navigation" data-parent="#tl-navbar"
+                                    >
+                                    FAQs
+                                </a></li><li style="display:none;"><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link disflex align-items-center"
+                                    href="https://trendlyne.com/features/matrix/"
+                                    aria-label="Toggle navigation" data-parent="#tl-navbar"
+                                    target="_blank"
+                                    >
+                                    All Features
+                                </a></li><li style="display:none;"><a class="nav-item ttn-item text-xs-center point tl-collapsing-nav-link"
+                                    href="https://trendlyne.com/web-widget/showcase"
+                                    aria-label="Toggle navigation" data-parent="#tl-navbar"
+                                    target="_blank"
+                                    >
+                                    Widgets
+                                </a></li></ul><span class="ib navbar-nav posrelative collect"><a role="button" href="#" data-toggle="dropdown" class="dropdown-toggle-tl ib ttn-item"
+                            >
+                                More
+                                <i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-down-arrow ml3 scale-75"></i></a><ul id="submenu" class="dropdown-menu"></ul></span></div></div><div class="col-xl-3 col-lg-4 col-md-5 col-sm-10 col-xs-10 p-l-0 p-r-0" id="topnav-right-col"><div class='tl-navbar-search-wrapper'><div class='tl-navbar-search-btn mb05r hidden-sm-up'><a class="nav-link btn p-b-0 p-x-1"><sub><i class="sprite-side-menu sprite-side-menu-search-icon posrelative" style="top: 3px;"></i><span class="p-l-1">
+                                        Search stocks
+                                        </span></sub></a></div><div class="topnav-right pull-sm-down-right"><div class="hidden-xs-down pt0" id="top-nav-search"><div class=""><form class="navbar-form navbar-input-group input-group p0 tl-navbar-search-form tl-navbar-search"
+        data-bind="enterkey: submit" ><div class="input-group-addon nobdr tl-navbar-search-addon"><i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-search-Icon"></i></div><input name="search" type="text" autocomplete="off" id="navbar-desktop-search"
+                class="navbar-topsearch form-inline form-control mform-control navbar-ac tl-navbar-search-input tl-navbar-search"
+                data-searchurl="https://trendlyne.com/member/api/ac_snames/stock/"
+                placeholder=" Search Stock, IPO, MF " 
+                /></form></div></div><div class="hidden-sm-down"><div class='tl-country-switch color202020' ><div class="btn-group full-width hidden-sm-down" role="group"><div><div class='pointer dropdown dropdown-toggle-tl' id="countryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-IND img-rounded"></i><i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-down-arrow scale-75"></i></div><div class="dropdown-menu pa05r" aria-labelledby="countryDropdown"><a
+                        class="dropdown-item point p-a-0 mx05r country-switcher country-option option active"
+                        rel="noopener noreferrer"
+                        href="https://trendlyne.com/switch-country/IND/"
+                        data-country-code="IND"
+                    ><i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-IND img-rounded mr4"></i>
+                        IND
+                    </a><a
+                        class="dropdown-item point p-a-0 mx05r country-switcher country-option option "
+                        rel="noopener noreferrer"
+                        href="https://trendlyne.com/switch-country/USA/"
+                        data-country-code="USA"
+                    ><i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-USA img-rounded mr4"></i>
+                        USA
+                    </a></div></div></div><div class="hidden-md-up full-width"><div data-toggle="modal" data-target="#selectCountyModal" class="modal-trigger"><div class="selected-country"><div class='country-option nobdr'><i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-IND img-rounded"></i><span class="vr"></span><span class="pl6"> 
+                        
+                            
+                                IND
+                            
+                        
+                            
+                        
+                    </span></div><i class="sprite-side-menu sprite-side-menu-arrow-icon"></i></div></div><div class="modal fade noclearOnclose" id="selectCountyModal" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header p-a-0"><div class="selected-country"><div class='country-option nobdr p-a-0'><i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-IND img-rounded"></i><span class="vr"></span><span class="color202020 pl6">
+                                
+                                
+                                    
+                                        IND
+                                    
+                                
+                                    
+                                
+                            </span></div><button type="button" class="close" data-dismiss="modal"><div  aria-hidden="true">×</div><span class="sr-only">Close</span></button></div></div><div class="modal-body"><a href="https://trendlyne.com/switch-country/IND/" class="col-inh"><div class="option "><div class='country-option active'><i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-IND img-rounded"></i><span class="pl6">IND</span></div></div></a><a href="https://trendlyne.com/switch-country/USA/" class="col-inh"><div class="option "><div class='country-option '><i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-USA img-rounded"></i><span class="pl6">USA</span></div></div></a></div></div></div></div></div></div></div><div style="margin-left:auto"><div class="fetchOnLoad" data-fetchurl="
+                                        https://trendlyne.com/getUserNavBar/"></div></div></div></div></div><div  id="navbar-xs-search" ><form class="form-inline navbar-form navbar-input-group input-group navbar-xs-search-form "
+                        data-bind="enterkey: submit"><div class="input-group-btn "><button type="button" class="norbdr btn dropdown-toggle tl-navbar-search-dd"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><ul class="dropdown-menu ddselect" data-function="searchValueChange"><li class="dropdown-item"><span data-context="stock" data-placeholder="stocks"
+                                        data-searchurl="https://trendlyne.com/member/api/ac_snames/stock/" class="active">Stocks</span></li><li class="dropdown-item"><span data-context="FNO" data-placeholder="Futures & Options"
+                                        data-searchurl="https://trendlyne.com/futures-options/search/">Futures & Options<sup><i class="fa fa-asterisk negative fs04rem"></i></sup></span></li><li class="dropdown-item"><span data-context="mutualfund" data-placeholder="Mutual Funds"
+                                    data-searchurl="https://trendlyne.com/mutual-fund/search/" >Mutual Funds</span></li><li class="dropdown-item"><span data-context="news" data-placeholder="news"
+                                    data-searchurl="https://trendlyne.com/member/api/ac_snames/news/" >News</span></li><li class="dropdown-item"><span data-context="news" data-placeholder="Fundamentals Data"
+                                    data-searchurl="https://trendlyne.com/member/api/ac_snames/fundamental/" >Fundamentals</span></li><li class="dropdown-item"><span data-context="research" data-placeholder="research reports"
+                                    data-searchurl="https://trendlyne.com/research-reports/search/">Reports</span></li><li class="dropdown-item"><span data-context="corpactions" data-placeholder="corporate actions"
+                                    data-searchurl="https://trendlyne.com/member/api/ac_snames/corpactions/">Corporate Actions</span></li><li class="dropdown-item"><span data-context="alerts" data-placeholder="alerts"
+                                    data-searchurl="https://trendlyne.com/member/api/ac_snames/alerts/">Alerts</span></li><li class="dropdown-item"><span data-context="shareholding" data-placeholder="shareholding"
+                                        data-searchurl="https://trendlyne.com/member/api/ac_snames/shareholding/">Shareholding</span></li></ul></div><input id="navbar-mobile-search" class="navbar-topsearch form-control mform-control navbar-ac tl-navbar-search-input pt075r"  name="search"
+                                placeholder="Search for a stock" data-searchurl="https://trendlyne.com/member/api/ac_snames/stock/"
+                                type="text" autocomplete="off"/><div class="input-group-addon nobdr tl-navbar-close-addon p-x-2" ><i class="fa fa-times  " ></i></div></form></div></div></div></nav></header><!-- Fixed navbar -->
+
+
+
+
+
+    
+
+
+<div class="container-fluid">
+  <div class="row login-signup p-t-2">
+    <div class="col-xs-12 p-x-0">
+    
+<div class="container-fluid p-t-1">
+    <div class="row login-signup-v2 m-b-2">
+        <div class="card h-100">
+            <div class="card-body">
+                
+
+
+
+
+<div class="container tabs_container">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs d-flex justify-content-center" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#login" id="login-toggle" data-loginnavtab>Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#signup" data-signupnavtab id="signup-toggle">Sign Up</a>
+      </li>
+    </ul>
+  
+    <!-- Tab panes -->
+    <div class="tab-content">
+      
+      <div id="login" data-logincontainer class="container tab-pane active">
+        <div class="login_heading pt175r">
+          <p class="fw500">Log into <span><img src="https://cdn-static.trendlyne.com/static/landing_images/small_logo.png"></span></p>
+        </div>
+      
+        <div class="su-continue-text">
+            Continue with
+        </div>
+      
+        <div class="center-block">
+            
+
+
+
+
+
+
+<div class="col-lg-12 col-md-12 col-xs-12 col-xs-12">
+    <div class="">
+        
+            <div class="socialaccount_ballot" >
+                <ul class="socialaccount_providers list-unstyled social_icons_v2">
+                    
+
+
+
+
+ 
+
+
+
+
+    <li>
+      <a title="Google" class="socialaccount_provider"
+      href="https://trendlyne.com/accounts/google/login/?process=login&next=%2Fget-document%2Fpost%2Fpdf%2F5487909%2F"> 
+        <img src="https://cdn-static.trendlyne.com/static/landing_images/google-logo.png" width="56">
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li>
+      <a title="Apple" class="socialaccount_provider"
+      href="https://trendlyne.com/accounts/apple/login/?process=login&next=%2Fget-document%2Fpost%2Fpdf%2F5487909%2F"> 
+        <img src="https://cdn-static.trendlyne.com/static/landing_images/apple-logo.png" width="56">
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+                </ul>
+            </div>
+
+            
+
+
+
+<div id="fb-root"></div>
+<script id="allauth-facebook-settings" type="application/json">
+{"appId": "935781369795402", "version": "v2.1", "sdkUrl": "//connect.facebook.net/en-US/sdk.js", "initParams": {"appId": "935781369795402", "version": "v2.1"}, "loginOptions": {"scope": "email,public_profile"}, "loginByTokenUrl": "https://trendlyne.com/accounts/facebook/login/token/", "cancelUrl": "https://trendlyne.com/accounts/social/login/cancelled/", "logoutUrl": "https://trendlyne.com/accounts/logout/", "loginUrl": "https://trendlyne.com/accounts/facebook/login/", "errorUrl": "https://trendlyne.com/accounts/social/login/error/", "csrfToken": "Un2EXr7eQ4sbNcZEuTCNAsVVV5RmDWAsLqqDpUabHMaAbEhe3OvdgYFD9Hl2WIc3"}
+</script>
+<script type="text/javascript" src="https://cdn-static.trendlyne.com/static/facebook/js/fbconnect.js"></script>
+
+
+
+
+
+
+
+
+        
+    </div>
+</div>
+<div class="clearfix"></div>
+
+        </div>
+
+        <div class="parent_divider">
+            Or
+        </div>
+
+        <div class="center-block">
+            
+
+
+
+
+
+
+<div class="col-lg-12 col-md-12 col-xs-12 col-xs-12">
+    <div class="login-form-container">
+        <form class="login login-lables" id="_login_form" method="POST" action="https://trendlyne.com/accounts/login/">
+            <input type="hidden" name="csrfmiddlewaretoken" value="4nBEImXqEPS6wvlJCzGV0A5aEw9Nw1pJVqZDaP0nvxAvUXDjbuzlG6PSS8DtPN1k">
+            <div class="form-group ">
+                <label class="fw400">Email</label>
+                <input type="text" title="" required="required" placeholder="Email" name="login" id="id_login" 
+                class="form-control border-rounded" autofocus="autofocus">
+                <span class="errordiv">
+                    
+                </span>
+            </div>
+            <div class="form-group log-password">
+                <label class="fw400">Password</label>
+                <input type="password" title="" required="required" placeholder="Password" name="password" 
+                    id="id_password" class="form-control border-rounded" maxlength="64"
+                >
+                <a
+                    id="login-with-otp-form"
+                    class="login-with-otp"
+                    onclick="redirectToLoginWithOtp(event)"
+                    href="https://trendlyne.com/accounts/login/otp/"
+                >
+                    Login with OTP
+                </a>
+                <i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-ele-slash" id="eye-icon" onclick="showPassword(event)"></i>
+                <i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-eye-not-slash fa-eye hidden" id="conf-eye-icon" onclick="showPassword(event)"></i>
+                <span class="errordiv">
+                    
+                </span>
+            </div>
+
+            <input type="hidden" name="recaptcha_token" id="-g-recaptcha-token-login" />
+            <input type="hidden" name="recaptcha_action" value="login" />
+
+            
+            <input type="hidden" name="next" value="/get-document/post/pdf/5487909/" />
+            
+
+            
+            
+
+            <div class="form-actions">
+                <label for="id_remember" class="pointer fs08rem hidden"><input type="checkbox" name="remember" id="id_remember" class="" checked> <span class="remember-text">Remember Me</span></label>
+                <button class="btn btn-sm btn-block tl-btn-blue p-x-2 pull-right login-btn" type="submit">Login</button>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="other_options">
+                
+                
+                
+                <a class="fs075rem floatR ma025r" href="https://trendlyne.com/accounts/forgot-password/">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<script>
+    document.getElementById('_login_form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        try {
+            if (window.TrendlyneApp && "verify_captcha" in TrendlyneApp) {
+                const token = await TrendlyneApp.verify_captcha(TrendlyneApp.captcha_actions.login);
+                const tokenInput = document.getElementById('-g-recaptcha-token-login');
+                tokenInput.value = token;
+                this.submit();
+            }
+        } catch (error) {
+            console.error('reCAPTCHA verification failed:', error);
+        }
+    });
+</script>
+<script type="text/javascript">
+    // adding the email in the login with OTP url and redirecting to login page.
+    function redirectToLoginWithOtp(event) {
+
+        const loginWithOtpButtonElement = document.getElementById("login-with-otp-form");
+
+        if (loginWithOtpButtonElement === undefined || loginWithOtpButtonElement === null) return;
+
+        const currLoginWithOtpUrl = loginWithOtpButtonElement.href;
+
+        if (currLoginWithOtpUrl === null) return;
+
+        const email = document.getElementById("id_login").value;
+
+        const EMAIL_REGEX = new RegExp(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+
+        if (!email || email === "" || !EMAIL_REGEX.test(email)) return;
+
+        event.preventDefault();
+
+        const url = new URL(currLoginWithOtpUrl);
+
+        url.searchParams.set('email', email);
+
+        window.location.href = url;
+    }
+</script>
+
+<script type="text/javascript">
+    // Function for show/hide password and toggle eye icon for both password & confirm password
+    function showPassword(event){
+        const currentEyeElem = event.target;
+        const isCheckClass = currentEyeElem.classList.contains('fa-eye');
+        const inputElement = currentEyeElem.parentElement.querySelector('.form-control') || null;
+        if(isCheckClass) {
+            // eye
+            if(inputElement) inputElement.setAttribute('type','password');
+            currentEyeElem.previousElementSibling.classList.remove('hidden');
+            currentEyeElem.classList.add('hidden');
+        }else {
+            // eye-slash
+            if(inputElement) inputElement.setAttribute('type','text');
+            currentEyeElem.classList.add('hidden');
+            currentEyeElem.nextElementSibling.classList.remove('hidden');
+        }
+    }
+</script>
+
+
+
+        </div>
+
+        <div class="sign_up_divider mt075r">
+                Don’t have an account?
+        </div>
+
+        <div class="tab_signup p-t-1 ">
+          <a class="btn btn-primary-outline btn-block p-x-2 fw500 " onclick="handleClass(event)">Sign Up</a>
+        </div>
+      </div>
+    
+      <div id="signup" data-signupcontainer class="container tab-pane fade signup_tab" data-signup="https://trendlyne.com/member/welcome/1/new/">
+        
+        <div class="login_heading pt175r">
+          <p class="fw500">Create your <span><img src="https://cdn-static.trendlyne.com/static/landing_images/small_logo.png"></span>&nbsp; account - <span class="for-free-text">For Free</span></p>
+      </div>
+
+      <div class="su-continue-text">
+          Continue with
+      </div>
+      
+      <div class="center-block">
+          
+
+
+
+
+
+
+<div class="col-lg-12 col-md-12 col-xs-12 col-xs-12">
+    <div class="">
+        
+            <div class="socialaccount_ballot" >
+                <ul class="socialaccount_providers list-unstyled social_icons_v2">
+                    
+
+
+
+
+ 
+
+
+
+
+    <li>
+      <a title="Google" class="socialaccount_provider"
+      href="https://trendlyne.com/accounts/google/login/?process=login&next=%2Fget-document%2Fpost%2Fpdf%2F5487909%2F"> 
+        <img src="https://cdn-static.trendlyne.com/static/landing_images/google-logo.png" width="56">
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li>
+      <a title="Apple" class="socialaccount_provider"
+      href="https://trendlyne.com/accounts/apple/login/?process=login&next=%2Fget-document%2Fpost%2Fpdf%2F5487909%2F"> 
+        <img src="https://cdn-static.trendlyne.com/static/landing_images/apple-logo.png" width="56">
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+                </ul>
+            </div>
+
+            
+
+
+
+<div id="fb-root"></div>
+<script id="allauth-facebook-settings" type="application/json">
+{"appId": "935781369795402", "version": "v2.1", "sdkUrl": "//connect.facebook.net/en-US/sdk.js", "initParams": {"appId": "935781369795402", "version": "v2.1"}, "loginOptions": {"scope": "email,public_profile"}, "loginByTokenUrl": "https://trendlyne.com/accounts/facebook/login/token/", "cancelUrl": "https://trendlyne.com/accounts/social/login/cancelled/", "logoutUrl": "https://trendlyne.com/accounts/logout/", "loginUrl": "https://trendlyne.com/accounts/facebook/login/", "errorUrl": "https://trendlyne.com/accounts/social/login/error/", "csrfToken": "Z4RqpTfToVIynfYwtowrsFmDTzWT6ph6Q7fpRmiQfDqXLHg62jpR8b6l7bqzpbTH"}
+</script>
+<script type="text/javascript" src="https://cdn-static.trendlyne.com/static/facebook/js/fbconnect.js"></script>
+
+
+
+
+
+
+
+
+        
+    </div>
+</div>
+<div class="clearfix"></div>
+
+      </div>
+      
+      <div class="parent_divider">
+          Or
+      </div>
+
+      <div class="center-block">
+          
+
+
+
+
+
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+    <div class="">
+    
+    <form class="signup_labels signup_form" id="_signup_form" method="post" action="https://trendlyne.com/accounts/signup/generate-otp/?next=/member/welcome/1/new/">
+        <input type="hidden" name="csrfmiddlewaretoken" value="4nBEImXqEPS6wvlJCzGV0A5aEw9Nw1pJVqZDaP0nvxAvUXDjbuzlG6PSS8DtPN1k">
+
+        <div class="form-group">
+            <label class="fw400">Email</label>
+            <input class="form-control border-rounded" id="id_email" name="email" placeholder="Email" type="email" required="" maxlength="128"/>
+            <span class="errordiv signup-error-section ">
+                
+            </span>
+        </div>
+        <div class="form-group password-field">
+            <label class="fw400">Password</label>
+            <input class="form-control border-rounded" id="id_password1" name="password1" placeholder="Password" type="password" required="" maxlength="64"/>
+                <i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-ele-slash " id="p-eye-icon" onclick="showPassword(event)"></i>
+                <i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-eye-not-slash fa-eye hidden" id="p-conf-eye-icon" onclick="showPassword(event)"></i>
+            </div>
+
+            <span class="errordiv signup-error-section m-t-1"> 
+                             
+            </span>
+
+        <div class="clearfix"></div>
+
+        <div class="form-group password-field">
+            <label class="fw400">Confirm Password</label>
+            <input class="form-control border-rounded" id="id_password2" name="password2" placeholder="Confirm Password" type="password" required="true" maxlength="64" />
+
+            <input id="id_confirmation_key" maxlength="40" name="confirmation_key" type="hidden" />
+                <i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-ele-slash" id="c-eye-icon" onclick="showPassword(event)"></i>
+                <i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-eye-not-slash fa-eye hidden" id="c-conf-eye-icon" onclick="showPassword(event)"></i>
+            </div>
+            <span class="errordiv signup-error-section m-t-1">
+                
+                    
+                
+            </span>
+      
+        
+            <input type="hidden" name="next" value="/get-document/post/pdf/5487909/" />
+        
+
+        <input type="hidden" name="recaptcha_token" id="-g-recaptcha-token-signup" />
+        <input type="hidden" name="recaptcha_action" value="signup" />
+
+
+        
+
+        <div class="form-actions">
+            <button class="btn btn-sm btn-block tl-btn-blue p-x-2 login-btn" type="submit">Sign Up</button>
+        </div>
+    </form>
+
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<script type="text/javascript">
+    // Function for show/hide password and toggle eye icon for both password & confirm password
+    function showPassword(event){
+        const currentEyeElem = event.target;
+        const isCheckClass = currentEyeElem.classList.contains('fa-eye');
+        const inputElement = currentEyeElem.parentElement.querySelector('.form-control') || null;
+        if(isCheckClass) {
+            // eye
+            if(inputElement) inputElement.setAttribute('type','password');
+            currentEyeElem.previousElementSibling.classList.remove('hidden');
+            currentEyeElem.classList.add('hidden');
+        }else {
+            // eye-slash
+            if(inputElement) inputElement.setAttribute('type','text');
+            currentEyeElem.classList.add('hidden');
+            currentEyeElem.nextElementSibling.classList.remove('hidden');
+        }
+    }
+</script>
+
+
+<script>
+    document.getElementById('_signup_form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        try {
+            if (window.TrendlyneApp && "verify_captcha" in TrendlyneApp) {
+                const token = await TrendlyneApp.verify_captcha(TrendlyneApp.captcha_actions.signup);
+                const tokenInput = document.getElementById('-g-recaptcha-token-signup');
+                tokenInput.value = token;
+                this.submit();
+            }
+        } catch (error) {
+            console.error('reCAPTCHA verification failed:', error);
+        }
+    });
+</script>
+      </div>
+
+      </div> 
+    </div>
+    <!-- download app -->
+    
+
+<div class="product-tab-container">
+    <div class="products-text">One account. Many products.</div>
+    <div class="product-logo-container">
+        <div class="logo-box">
+            <img src=https://cdn-static.trendlyne.com/static/signup_modal/trendlyne_logo.webp alt="trendlyne logo">
+        </div>
+        <div class="logo-box">
+            <img src=https://cdn-static.trendlyne.com/static/signup_modal/smartoptions_logo.webp alt="smart options logo">
+        </div>
+        <div class="logo-box">
+            <img src=https://cdn-static.trendlyne.com/static/signup_modal/starfolio_logo.webp alt="starfolio logo">
+        </div>
+    </div>
+<div>
+    <div class="parent_divider"></div>
+      <div class="cen m-t-1 pt05r">
+        <span class="fs075rem font-family">
+            Get Trendlyne App
+        </span>
+
+        <a class="modal-trigger pl05rem nolb hidden-sm-down" href="https://trendlyne.com/promotion/banners/" data-dismiss="modal">
+            <img src="https://cdn-static.trendlyne.com/static/mobileLandingPage/play-store-icon.png" alt="Google Play" class="clip mr10">
+            <img src="https://cdn-static.trendlyne.com/static/mobileLandingPage/app-store-icon.png" alt="App Store" class="clip">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.trendlyne.markets&referrer=utm_source%3Dtlnewsletter%26utm_medium%3Demail%26utm_campaign%3Dtlnewsletter" class="hidden-md-up pa05r nolb">
+          <img src="https://cdn-static.trendlyne.com/static/mobileLandingPage/play-store-icon.png" alt="Google Play" class="clip">
+      </a>
+      <a href="https://apps.apple.com/in/app/trendlyne-stocks-finance/id1528733628?referrer=utm_source%3Dtlnewsletter%26utm_medium%3Demail%26utm_campaign%3Dtlnewsletter" class="hidden-md-up pa05r nolb">
+          <img src="https://cdn-static.trendlyne.com/static/mobileLandingPage/app-store-icon.png" alt="App Store" class="clip">
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+
+  // Show the signup tab active when redirect to signup page
+  const url = window.location.href.split("next=");
+  const signupUrl = document.querySelector("#signup").dataset.signup; 
+  if(signupUrl && url[1]=== signupUrl){
+    const signupToggle = document.querySelector("#signup-toggle");
+    const loginToggle = document.querySelector("#login-toggle");
+    const loginTab = document.querySelector("#login");
+    const signuptab = document.querySelector("#signup");
+
+    // handling the classes while switching the tabs
+    loginTab.classList.remove("active"); 
+    loginToggle.classList.remove("active");
+    signupToggle.classList.add("active");
+    signuptab.classList.add("active","in");
+
+  }
+   
+
+  // Go to sign tab while clicking the signup button
+  function handleClass(event) {
+    let currElem = event.target;
+    let parentElem = currElem.closest(".tab-content");
+    let navTabsElem = parentElem.previousElementSibling;
+    let signUpNavTabElem = navTabsElem.querySelectorAll('[data-signupnavtab]');
+    signUpNavTabElem[0].click()
+  }
+</script>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+  </div>
+</div><!-- container -->
+
+
+    
+    <script src="https://cdn-static.trendlyne.com/static/CACHE/js/output.67199f1d9f9f.js"></script>
+
+  
+  
+
+  
+  <script src="https://cdn-static.trendlyne.com/static/CACHE/js/output.e2bb49a1dfb8.js"></script>
+
+<div id="basemodal" class="tlyne-modal modal" role="dialog" aria-hidden="true"></div><div id="loginmodal" class="tlyne-modal modal login_modal_v2" role="dialog" aria-hidden="true"></div><div id="datamodal" class="modal" role="dialog" aria-hidden="true"></div><div id="bottom-modal" class="modal fade" role="dialog" aria-hidden="true"></div><div id="bottom-sheet-modal"></div><link rel="stylesheet" href="https://cdn-static.trendlyne.com/static/CACHE/css/output.8e3ae999fe28.css" type="text/css"><footer class='tl-footer-ctn hidden notvisible'><div class='tl-footer-main-ctn'><div class='footer-header'><div class='footer-title'><img 
+                        src="https://cdn-static.trendlyne.com/static/TL-logomark-v1.webp" 
+                        class="logo" 
+                        alt="Trendlyne Logo" 
+                        aria-label="Trendlyne Logo"
+                        height="64" width="74" style="margin: -15px;"
+                    />
+                    Trendlyne
+                </div><div class='footer-desc'>
+                    Stay ahead of the market
+                </div></div><div class='footer-content-ctn'><div class='ftr-ctn'><nav aria-label="Quick Links"><span class='ctn-head-title'>Quick Links <span class='title-line'></span></span><ul class='content-list'><li><a class='content-items' href="https://trendlyne.com/contact/">
+                                                Contact us
+                                                
+                                            </a></li><span class='point-break'></span><li><a class='content-items' href="https://trendlyne.com/news-by-trendlyne/">
+                                                Blogs
+                                                
+                                            </a></li><span class='point-break'></span><li><a class='content-items' href="/faq/">
+                                                FAQs
+                                                
+                                            </a></li><span class='point-break'></span><li><a class='content-items' href="https://trendlyne.com/features/matrix/">
+                                                All Features
+                                                
+                                            </a></li></ul></nav><nav aria-label="Markets Today"><span class='ctn-head-title'>Markets Today <span class='title-line'></span></span><ul class='content-list'><li><a class='content-items' href="https://trendlyne.com/equity/1887/NIFTY/">
+                                                Nifty 50 today
+                                                
+                                            </a></li><span class='point-break'></span><li><a class='content-items' href="https://trendlyne.com/equity/4482/BSESENSEX/">
+                                                Sensex today
+                                                
+                                            </a></li><span class='point-break'></span><li><a class='content-items' href="https://trendlyne.com/dashboard/results/industry/">
+                                                Latest Quarterly results
+                                                
+                                            </a></li><span class='point-break'></span><li><a class='content-items' href="https://trendlyne.com/macro-data/fii-dii/latest/cash-pastmonth/">
+                                                FII &amp; DII data today
+                                                
+                                            </a></li></ul></nav><nav aria-label="Dashboard"><span class='ctn-head-title'>Dashboard <span class='title-line'></span></span><ul class='content-list'><li><a class='content-items' href="https://trendlyne.com/equity/sector-industry-analysis/sector/day/">
+                                                Industry &amp; Sector analysis
+                                                
+                                            </a></li><span class='point-break'></span><li><a class='content-items' href="https://trendlyne.com/equity/etf-dashboard/">
+                                                ETFs
+                                                
+                                            </a></li><span class='point-break'></span><li><a class='content-items' href="https://trendlyne.com/mutual-fund/mf-all/?category=Multi-Cap&amp;active=multicap">
+                                                Mutual Funds
+                                                
+                                            </a></li><span class='point-break'></span><li><a class='content-items' href="https://trendlyne.com/equity/sector-bullish-bearish-breadth/equi-weighted/">
+                                                Bullish &amp; Bearish spread
+                                                
+                                            </a></li><span class='point-break'></span><li><a class='content-items' href="https://trendlyne.com/equity/sector-industry-analysis/global-indices/">
+                                                Global Indices
+                                                
+                                            </a></li></ul></nav><nav aria-label="Tools"><span class='ctn-head-title'>Tools <span class='title-line'></span></span><ul class='content-list'><li><a class='content-items' href="https://trendlyne.com/equity/compare-stocks/">
+                                                Compare stocks
+                                                
+                                            </a></li><span class='point-break'></span><li><a class='content-items' href="https://trendlyne.com/web-widget/showcase">
+                                                Widgets
+                                                
+                                            </a></li><span class='point-break'></span><li><a class='content-items' href="https://trendlyne.com/tools/data-downloader/stock-data-downloader/">
+                                                Data Downloader
+                                                
+                                            </a></li><span class='point-break'></span><li><a class='content-items' href="https://trendlyne.com/tools/data-downloader/trendlyne-excel-connect/">
+                                                Excel Connect
+                                                
+                                            </a></li></ul></nav></div><div class='ftr-ctn'><nav aria-label="IPOs"><span class='ctn-head-title'>IPOs <span class='title-line'></span></span><ul class='content-list'><li><a class='content-items' href="https://trendlyne.com/ipo/dashboard/" >
+                                            Dashboard (Mainboard &amp; SME)
+                                            
+                                        </a></li><span class='point-break'></span><li><a class='content-items' href="https://trendlyne.com/ipo/upcoming/" >
+                                            Upcoming IPOs
+                                            
+                                        </a></li><span class='point-break'></span><li><a class='content-items' href="https://trendlyne.com/ipo/screener/recently-listed/" >
+                                            Recently Listed IPOs
+                                            
+                                        </a></li><span class='point-break'></span><li><a class='content-items' href="https://trendlyne.com/ipo/screener/most-successful/" >
+                                            Most Successful IPOs
+                                            
+                                        </a></li></ul></nav><nav aria-label="Upcoming IPOs"><span class='ctn-head-title'>Upcoming IPOs <span class='title-line'></span></span><ul class='content-list'><li><a class='content-items' href="/ipo/detail/2381/apsis-aerocom-ltd/" >
+                                            Apsis Aerocom
+                                            
+                                        </a></li><span class='point-break'></span><li><a class='content-items' href="/ipo/detail/2380/raajmarg-infra-investment-trust/" >
+                                            Raajmarg Infra Investment
+                                            
+                                        </a></li><span class='point-break'></span><li><a class='content-items' href="/ipo/detail/1674/innovision-ltd/" >
+                                            Innovision
+                                            
+                                        </a></li></ul></nav><nav aria-label="Company"><span class='ctn-head-title'>Company <span class='title-line'></span></span><ul class='content-list'><li><a class='content-items' href="https://trendlyne.com/privacy/" >
+                                            Privacy
+                                            
+                                        </a></li><span class='point-break'></span><li><a class='content-items' href="https://trendlyne.com/terms/" >
+                                            Terms of Use
+                                            
+                                        </a></li><span class='point-break'></span><li><a class='content-items' href="https://trendlyne.com/disclaimer/" >
+                                            Disclaimer
+                                            
+                                        </a></li></ul></nav><nav aria-label="Trendlyne Products"><span class='ctn-head-title'>Trendlyne Products <span class='title-line'></span></span><ul class='content-list'><li><a class='content-items' href="https://starfolio.trendlyne.com/" target="_blank" rel="noopener noreferrer">
+                                            Starfolio
+                                            
+                                        </a></li><span class='point-break'></span><li><a class='content-items' href="https://smartoptions.trendlyne.com" target="_blank" rel="noopener noreferrer">
+                                            SmartOptions
+                                            
+                                        </a></li><span class='point-break'></span><li><a class='content-items' href="https://us.trendlyne.com/us/markets-today/" >
+                                            Trendlyne US
+                                            
+                                                <span class="tag">Global</span></a></li></ul></nav><nav class="mobile-app" aria-label="Mobile Downloads"><span class='ctn-head-title'>Get Mobile App <span class='title-line'></span></span><ul class='content-list'><li><div class="qr-container"><div data-toggle="tooltip" data-title="Click to expand"><i class="qr-code sprite-features sprite-features-play-store-qr-code"></i></div><div class="qr-app-text android">Android</div></div><a
+                                    href="https://play.google.com/store/apps/details?id=com.trendlyne.markets&hl=en&gl=US"
+                                    target="_blank" class="app-button-link"><i class="app-button sprite-features sprite-features-play-store"></i></a></li><li><div class="qr-container"><div data-toggle="tooltip" data-title="Click to expand"><i class="qr-code sprite-features sprite-features-app-store-qr-code"></i></div><div class="qr-app-text ios">iOS</div></div><a
+                                href="https://apps.apple.com/us/app/trendlyne-stocks-finance/id1528733628"
+                                target="_blank"
+                                class="app-button-link"
+                                ><i class="app-button sprite-features sprite-features-app-store"></i></a></li></ul></div></div></div><div class='copyright'><p class="copyright-text">
+
+Copyright &copy; 2026 Giskard Datatech Pvt Ltd
+
+                <span class="sebi-reg-no">(RA SEBI Reg No: INH000022507)</span></p><span itemscope itemtype="http://schema.org/Organization"><link itemprop="url" href='https://trendlyne.com'><div class="social-icons"><a target="_blank"
+                        href="https://twitter.com/Trendlyne"
+                        rel="noopener noreferrer nofollow"
+                        title="Twitter"
+                        style="height:1.125rem;"
+                        itemprop="sameAs"><i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-twitter-icon" style="
+                        transform: scale(1.25);
+                    "></i></a><a target="_blank"
+                        href="https://in.linkedin.com/company/trendlyne"
+                        rel="noopener noreferrer nofollow"
+                        title="Linkedin"
+                        itemprop="sameAs"><i class="sprite-navbar-subnavbar sprite-navbar-subnavbar-linkedin-icon" style="
+                        transform: scale(0.85);"></i></a></div></span></div></footer><div id="show-qr-code"></div><div class='tl-noticebox'></div>
+<div id="infomodal" class="modal" role="dialog" aria-hidden="true"></div>
+<span id="google_signin_provider" data-google-login-url="https://trendlyne.com/accounts/google/login/?process=login&next=%2Fget-document%2Fpost%2Fpdf%2F5487909%2F" class="hide"></span>
+
+<div id="gdpr_cookie_loader"></div>
+
+
+
+    <script src="https://cdn-static.trendlyne.com/static/CACHE/js/output.b1ec7bf374e9.js"></script>
+
+    <script>
+    // Resolve name collision between jQuery UI and Twitter Bootstrap
+    $.widget.bridge('uitooltip', $.ui.tooltip);
+    </script>
+
+
+
+<script src="https://cdn-static.trendlyne.com/static/CACHE/js/output.f517e60eb034.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+
