@@ -1,20 +1,10 @@
 # Infosys Company Scraper
 
-A Python web scraper that collects financial data about **Infosys** from MoneyControl and other trusted finance websites using DuckDuckGo search.
+A Python web scraper that collects financial news, quarterly results, analyst reports, and research PDFs about **Infosys** using DuckDuckGo as the search engine and BeautifulSoup for HTML parsing.
 
 ---
 
-## What it does
-
-- Searches DuckDuckGo with 5 focused queries targeting different types of Infosys data
-- Scrapes article headlines, body text, and summaries from the results
-- Downloads any PDF reports (analyst reports, filings) found on those pages
-- Filters out junk pages (social media, videos, pages with no Infosys content)
-- Saves everything to a structured CSV file
-
----
-
-## Project structure
+## Project Structure
 
 ```
 project/
@@ -23,102 +13,142 @@ project/
 ├── requirements.txt       ← dependencies
 ├── README.md              ← this file
 │
-├── infosys_data.csv       ← generated after running (scraped articles)
-└── infosys_pdfs/          ← generated after running (downloaded PDFs)
+├── infosys_data.csv       ← generated on run (scraped articles)
+└── infosys_pdfs/          ← generated on run (downloaded broker PDFs)
 ```
 
 ---
 
-## Setup
+## Quickstart
 
-**1. Clone or download the project**
-
-**2. Install dependencies**
 ```bash
 pip install -r requirements.txt
-```
-
-**3. Run the scraper**
-```bash
 python infosys_scraper.py
 ```
 
-NLTK tokenizer data is downloaded automatically on the first run.
+NLTK tokenizer data downloads automatically on the first run. No API keys required.
+
+---
+
+## How It Works
+
+The scraper runs a 5-step pipeline for each of 5 search queries:
+
+```
+1. DuckDuckGo Search
+   └─ 5 queries × 8 results = up to 40 URLs discovered
+
+2. Filter
+   ├─ Block junk domains (YouTube, Twitter, Telegram, Reddit, etc.)
+   ├─ Skip duplicates seen in earlier queries
+   ├─ Skip pages with fewer than 50 words of body text
+   └─ Skip pages that don't mention "Infosys" at all
+
+3. Scrape HTML
+   ├─ Extract H1 headline
+   ├─ Extract body text from <p> tags
+   └─ Collect PDF links (trusted domains only)
+
+4. Summarize
+   └─ LSA algorithm (sumy) → 3 key sentences
+      · Input capped at 1000 words to prevent hangs on large documents
+      · 10-second timeout — skips gracefully if LSA takes too long
+
+5. Download PDFs
+   └─ Only PDFs from trusted domains that mention "Infosys"
+      Trusted: moneycontrol.com, bseindia.com, nseindia.com,
+               infosys.com, sebi.gov.in
+```
+
+---
+
+## Search Queries
+
+The scraper runs 5 focused queries targeting different types of data:
+
+| Label | Query |
+|-------|-------|
+| `news` | Infosys latest news 2025 moneycontrol |
+| `quarterly_results` | Infosys Q4 Q3 quarterly results earnings moneycontrol |
+| `annual_report` | Infosys annual report balance sheet moneycontrol financials |
+| `share_price` | Infosys share price analyst target buy sell moneycontrol |
+| `analyst_forecast` | Infosys revenue guidance outlook FY26 moneycontrol |
 
 ---
 
 ## Output
 
 ### `infosys_data.csv`
-Each row is one scraped article with these columns:
+
+Each row is one scraped article.
 
 | Column | Description |
 |--------|-------------|
-| `data_type` | Category of the article (`news`, `quarterly_results`, `annual_report`, `share_price`, `analyst_forecast`) |
-| `title` | Title from DuckDuckGo search result |
-| `url` | Full URL of the page |
+| `data_type` | Which query found this article (`news`, `quarterly_results`, etc.) |
+| `title` | Page title from DuckDuckGo search result |
+| `url` | Full URL of the scraped page |
 | `snippet` | Short preview text from DuckDuckGo |
-| `headline` | H1 headline scraped from the page |
-| `summary` | 3-sentence LSA summary of the article body |
+| `headline` | H1 heading scraped from the page |
+| `summary` | 3-sentence LSA extractive summary of the article |
 | `pdf_links` | Pipe-separated list of PDF URLs found on the page |
 | `error` | Any HTTP or network error encountered |
 
 ### `infosys_pdfs/`
-Analyst reports, broker notes, and filings downloaded as PDF files.
 
----
-
-## How it works
-
-```
-DuckDuckGo search (5 queries)
-        ↓
-Filter out junk URLs (YouTube, Twitter, Facebook etc.)
-        ↓
-Scrape HTML (headline + body text)
-        ↓
-Quality check (min 50 words + must mention Infosys)
-        ↓
-Summarize with LSA algorithm (sumy)
-        ↓
-Download PDFs found on page
-        ↓
-Save all data to CSV
-```
+Broker research notes and filings downloaded as PDFs. These come from MoneyControl's research section and BSE/NSE filings — typically analyst reports from firms like ICICI Securities, Emkay, Motilal Oswal, Anand Rathi, and Prabhudas Lalwai.
 
 ---
 
 ## Configuration
 
-All settings are at the top of `infosys_scraper.py`:
+All settings are at the top of `infosys_scraper.py` under the `CONFIG` section:
 
 ```python
-COMPANY_NAME  = "Infosys"   # change to scrape a different company
+COMPANY_NAME  = "Infosys"   # change this to scrape any other company
 MAX_RESULTS   = 8           # DuckDuckGo results per query
-SUMMARY_LINES = 3           # sentences in each summary
-REQUEST_DELAY = 1.5         # seconds between requests (be polite!)
+SUMMARY_LINES = 3           # sentences per article summary
+REQUEST_DELAY = 1.5         # seconds between requests
+PDF_FOLDER    = "infosys_pdfs"
+CSV_OUTPUT    = "infosys_data.csv"
 ```
 
-To scrape a different company, just change `COMPANY_NAME` and update the `SEARCH_QUERIES` list.
+To scrape a different company, change `COMPANY_NAME` and update `SEARCH_QUERIES` accordingly.
 
 ---
 
-## Libraries used
+## Filtering Logic
+
+### Blocked domains (never scraped)
+Social media, video platforms, and messaging apps are skipped entirely:
+`youtube.com`, `twitter.com`, `x.com`, `t.me`, `reddit.com`, `facebook.com`, `instagram.com`, `google.com/finance`, `scribd.com`
+
+### Trusted PDF domains (only these can serve PDFs)
+To prevent downloading unrelated PDFs (e.g. NVIDIA reports from financial comparison sites):
+`moneycontrol.com`, `bseindia.com`, `nseindia.com`, `infosys.com`, `sebi.gov.in`
+
+### Quality checks (applied after scraping)
+- **Minimum 50 words** of body text — filters out JS-rendered empty pages, login walls, and homepages
+- **Must mention "Infosys"** — filters out irrelevant pages that happened to appear in results
+- **PDF links must mention "Infosys"** in their URL or anchor text — prevents downloading generic legal/disclaimer PDFs
+
+---
+
+## Libraries Used
 
 | Library | Purpose |
 |---------|---------|
-| `ddgs` | DuckDuckGo search (no API key needed) |
+| `ddgs` | DuckDuckGo search — no API key needed |
 | `requests` | HTTP requests to fetch pages and PDFs |
-| `beautifulsoup4` | Parse HTML and extract text |
-| `sumy` | Extractive text summarization (LSA algorithm) |
-| `lxml` | HTML parser used by BeautifulSoup |
-| `nltk` | Tokenizer required by sumy |
+| `beautifulsoup4` | Parse HTML, extract text and links |
+| `sumy` | Extractive text summarization using LSA algorithm |
+| `lxml` | Fast HTML parser used by BeautifulSoup |
+| `nltk` | Sentence tokenizer required by sumy |
 
 ---
 
-## Known limitations
+## Known Limitations
 
-- Some sites (Infosys.com, Business Standard) return `403 Forbidden` and cannot be scraped
-- DuckDuckGo results vary — not every run will return the same URLs
-- PDFs behind login walls will fail to download
-- Summaries work best on long-form articles; short pages may return minimal summaries"# data_scrape" 
+- **JS-rendered pages** — Sites like Trendlyne, Groww, and Investing.com load content via JavaScript. `requests` fetches the raw HTML before JS runs, so these pages return 0 words and are skipped. A browser automation tool like Selenium would be needed to scrape them.
+- **403 errors** — Infosys.com and Business Standard actively block scrapers. Their content is inaccessible without authentication or a headless browser.
+- **DuckDuckGo variability** — Results differ between runs. The same query may return different URLs on different days.
+- **Salary PDFs** — Annual reports hosted on NSE/BSE are very large. The summarizer caps input at 1000 words and has a 10-second timeout to avoid hanging.

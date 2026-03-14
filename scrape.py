@@ -95,11 +95,36 @@ def search_duckduckgo(query: str, max_results: int) -> list[dict]:
 def summarize_text(text: str, sentence_count: int = SUMMARY_LINES) -> str:
     if not text or len(text.split()) < 30:
         return text.strip()
+
+    # Cap input to 1000 words — LSA hangs on massive documents (e.g. annual reports)
+    words = text.split()
+    if len(words) > 1000:
+        text = " ".join(words[:1000])
+
     try:
-        parser     = PlaintextParser.from_string(text, Tokenizer("english"))
-        summarizer = LsaSummarizer()
-        summary    = summarizer(parser.document, sentence_count)
-        return " ".join(str(s) for s in summary)
+        import threading
+        result = [None]
+        error  = [None]
+
+        def _run():
+            try:
+                parser     = PlaintextParser.from_string(text, Tokenizer("english"))
+                summarizer = LsaSummarizer()
+                summary    = summarizer(parser.document, sentence_count)
+                result[0]  = " ".join(str(s) for s in summary)
+            except Exception as e:
+                error[0] = str(e)
+
+        t = threading.Thread(target=_run)
+        t.start()
+        t.join(timeout=10)   # give up after 10 seconds
+
+        if t.is_alive():
+            return "[Summary skipped: took too long]"
+        if error[0]:
+            return f"[Summary error: {error[0]}]"
+        return result[0] or ""
+
     except Exception as e:
         return f"[Summary error: {e}]"
 
@@ -125,14 +150,38 @@ def scrape_article(url: str) -> dict:
         data["body"]    = body[:3000]
         data["summary"] = summarize_text(body)
 
+        # Trusted domains that host genuine Infosys broker/research PDFs
+        TRUSTED_PDF_DOMAINS = [
+            "moneycontrol.com",
+            "bseindia.com",
+            "nseindia.com",
+            "infosys.com",
+            "sebi.gov.in",
+        ]
+
         pdf_links = []
         for a in soup.find_all("a", href=True):
-            href = a["href"]
-            if href.lower().endswith(".pdf") or "pdf" in href.lower():
-                if href.startswith("http"):
-                    pdf_links.append(href)
-                else:
-                    pdf_links.append("https://www.moneycontrol.com" + href)
+            href     = a["href"]
+            alt_text = a.get_text(strip=True).lower()
+
+            if not (href.lower().endswith(".pdf") or "pdf" in href.lower()):
+                continue
+
+            # Resolve relative URLs
+            if not href.startswith("http"):
+                href = "https://www.moneycontrol.com" + href
+
+            # Only keep PDFs from trusted domains
+            if not any(domain in href for domain in TRUSTED_PDF_DOMAINS):
+                continue
+
+            # URL or link text must mention the company
+            if COMPANY_NAME.lower() not in href.lower() and \
+               COMPANY_NAME.lower() not in alt_text:
+                continue
+
+            pdf_links.append(href)
+
         data["pdf_links"] = list(set(pdf_links))
 
     except requests.exceptions.HTTPError as e:
@@ -225,12 +274,25 @@ def main():
             print(f"  [{i}] Scraping: {url[:70]}")
             article = scrape_article(url)
 
+            # Skip pages with no useful content (homepages, login walls, etc.)
             if article["error"]:
                 print(f"       Error: {article['error']}")
-            else:
-                print(f"       Headline : {article['headline'][:70]}")
-                print(f"       Summary  : {article['summary'][:100]}...")
-                print(f"       PDFs     : {len(article['pdf_links'])}")
+                continue
+
+            word_count = len(article["body"].split())
+            if word_count < 50:
+                print(f"       Skipping (too little content: {word_count} words)")
+                continue
+
+            # Skip pages that don't mention Infosys at all
+            combined = (article["headline"] + article["body"]).lower()
+            if "infosys" not in combined:
+                print(f"       Skipping (Infosys not mentioned)")
+                continue
+
+            print(f"       Headline : {article['headline'][:70]}")
+            print(f"       Summary  : {article['summary'][:100]}...")
+            print(f"       PDFs     : {len(article['pdf_links'])}")
 
             for pdf_url in article["pdf_links"]:
                 download_pdf(pdf_url, PDF_FOLDER)
