@@ -1,6 +1,6 @@
 # Infosys Company Scraper v4
 
-A Python web scraper that collects financial news, quarterly results, analyst reports, deal wins, ESG data, and research PDFs about **Infosys** using DuckDuckGo as the search engine and BeautifulSoup for HTML parsing. Achieves ~118 articles and ~33 PDFs per run across 15 focused search queries.
+A Python web scraper that collects financial news, quarterly results, analyst reports, deal wins, ESG data, and research PDFs about **Infosys** using DuckDuckGo as the search engine and BeautifulSoup for HTML parsing. Achieves ~118 articles and ~19 PDFs per run across 15 focused search queries.
 
 ---
 

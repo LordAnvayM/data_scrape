@@ -483,8 +483,9 @@ def main():
             print(f"       PDFs     : {len(article['pdf_links'])}")
 
             for pdf_url in article["pdf_links"]:
-                download_pdf(pdf_url, PDF_FOLDER)
-                total_pdfs += 1
+                result = download_pdf(pdf_url, PDF_FOLDER)
+                if not result.startswith("ERROR"):
+                    total_pdfs += 1
                 time.sleep(REQUEST_DELAY)
 
             merged = {"data_type": label, **result, **article}
