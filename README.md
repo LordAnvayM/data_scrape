@@ -1,6 +1,6 @@
-# Infosys Company Scraper
+# Infosys Company Scraper v4
 
-A Python web scraper that collects financial news, quarterly results, analyst reports, and research PDFs about **Infosys** using DuckDuckGo as the search engine and BeautifulSoup for HTML parsing.
+A Python web scraper that collects financial news, quarterly results, analyst reports, deal wins, ESG data, and research PDFs about **Infosys** using DuckDuckGo as the search engine and BeautifulSoup for HTML parsing. Achieves ~118 articles and ~33 PDFs per run across 15 focused search queries.
 
 ---
 
@@ -9,7 +9,8 @@ A Python web scraper that collects financial news, quarterly results, analyst re
 ```
 project/
 │
-├── infosys_scraper.py     ← main script
+├── scraper.py     ← main script
+├── credentials.txt        ← login details (Economic Times)
 ├── requirements.txt       ← dependencies
 ├── README.md              ← this file
 │
@@ -21,58 +22,87 @@ project/
 
 ## Quickstart
 
+**1. Install dependencies**
 ```bash
 pip install -r requirements.txt
-python infosys_scraper.py
 ```
 
-NLTK tokenizer data downloads automatically on the first run. No API keys required.
+**2. Fill in credentials** *(optional)*
+
+Open `credentials.txt` and add your Economic Times login:
+```
+economictimes.indiatimes.com | your@email.com | yourpassword
+```
+If you skip this, ET pages will still be scraped — just without authentication.
+
+**3. Run**
+```bash
+python scraper.py
+```
+
+NLTK tokenizer data and ChromeDriver install automatically on first run.
 
 ---
 
 ## How It Works
 
-The scraper runs a 5-step pipeline for each of 5 search queries:
-
 ```
-1. DuckDuckGo Search
-   └─ 5 queries × 8 results = up to 40 URLs discovered
+0. Load credentials.txt
+   └─ Selenium logs into Economic Times (headless Chrome)
+   └─ Cookies injected into requests.Session for ET pages
 
-2. Filter
+1. DuckDuckGo Search
+   └─ 15 queries × 15 results = up to 225 URLs discovered
+   └─ 4 second delay between queries to avoid DDG rate limiting
+
+2. Filter each URL
    ├─ Block junk domains (YouTube, Twitter, Telegram, Reddit, etc.)
-   ├─ Skip duplicates seen in earlier queries
-   ├─ Skip pages with fewer than 50 words of body text
-   └─ Skip pages that don't mention "Infosys" at all
+   └─ Skip duplicates already seen in earlier queries
 
 3. Scrape HTML
+   ├─ Use authenticated session if URL is from Economic Times
    ├─ Extract H1 headline
    ├─ Extract body text from <p> tags
-   └─ Collect PDF links (trusted domains only)
+   └─ Collect PDF links (trusted domains + Infosys mention only)
 
-4. Summarize
+4. Quality Check
+   ├─ Skip if fewer than 50 words of body text
+   └─ Skip if "Infosys" not mentioned in headline or body
+
+5. Summarize
    └─ LSA algorithm (sumy) → 3 key sentences
-      · Input capped at 1000 words to prevent hangs on large documents
-      · 10-second timeout — skips gracefully if LSA takes too long
+      · Input capped at 1000 words (prevents hangs on large docs)
+      · 10 second timeout — skips gracefully if too slow
 
-5. Download PDFs
-   └─ Only PDFs from trusted domains that mention "Infosys"
-      Trusted: moneycontrol.com, bseindia.com, nseindia.com,
-               infosys.com, sebi.gov.in
+6. Download PDFs
+   └─ Only from: moneycontrol.com, bseindia.com, nseindia.com,
+                 infosys.com, sebi.gov.in
+   └─ URL or anchor text must mention "Infosys"
+
+7. Save everything to CSV
 ```
 
 ---
 
-## Search Queries
+## 15 Search Queries
 
-The scraper runs 5 focused queries targeting different types of data:
-
-| Label | Query |
-|-------|-------|
-| `news` | Infosys latest news 2025 moneycontrol |
-| `quarterly_results` | Infosys Q4 Q3 quarterly results earnings moneycontrol |
-| `annual_report` | Infosys annual report balance sheet moneycontrol financials |
-| `share_price` | Infosys share price analyst target buy sell moneycontrol |
-| `analyst_forecast` | Infosys revenue guidance outlook FY26 moneycontrol |
+| Label | Query Focus |
+|-------|-------------|
+| `news` | Latest Infosys news 2025 |
+| `quarterly_results` | Q3/Q4 earnings and results |
+| `annual_report` | Balance sheet and financials |
+| `share_price` | Analyst targets, buy/sell ratings |
+| `analyst_forecast` | FY26 revenue guidance |
+| `management` | CEO Salil Parekh interviews and statements |
+| `deals` | Large deal wins and TCV |
+| `strategy` | AI, cloud, and partnership news |
+| `employees` | Attrition, headcount, and hiring |
+| `dividends` | Dividend and buyback announcements |
+| `segments` | BFSI, manufacturing, retail performance |
+| `geography` | North America and Europe revenue |
+| `competition` | vs TCS, Wipro, HCL comparison |
+| `margins` | EBIT and operating profit analysis |
+| `esg` | ESG, sustainability, governance |
 
 ---
 
@@ -80,56 +110,47 @@ The scraper runs 5 focused queries targeting different types of data:
 
 ### `infosys_data.csv`
 
-Each row is one scraped article.
-
 | Column | Description |
 |--------|-------------|
-| `data_type` | Which query found this article (`news`, `quarterly_results`, etc.) |
-| `title` | Page title from DuckDuckGo search result |
+| `data_type` | Which query found this article |
+| `title` | Page title from DuckDuckGo |
 | `url` | Full URL of the scraped page |
 | `snippet` | Short preview text from DuckDuckGo |
 | `headline` | H1 heading scraped from the page |
-| `summary` | 3-sentence LSA extractive summary of the article |
-| `pdf_links` | Pipe-separated list of PDF URLs found on the page |
+| `summary` | 3-sentence LSA extractive summary |
+| `pdf_links` | Pipe-separated PDF URLs found on the page |
 | `error` | Any HTTP or network error encountered |
 
 ### `infosys_pdfs/`
-
-Broker research notes and filings downloaded as PDFs. These come from MoneyControl's research section and BSE/NSE filings — typically analyst reports from firms like ICICI Securities, Emkay, Motilal Oswal, Anand Rathi, and Prabhudas Lalwai.
+Broker research notes downloaded from MoneyControl and BSE/NSE — typically from ICICI Securities, Emkay, Motilal Oswal, Anand Rathi, and Prabhudas Lalwai.
 
 ---
 
 ## Configuration
 
-All settings are at the top of `infosys_scraper.py` under the `CONFIG` section:
+All settings are at the top of `scraper.py`:
 
 ```python
-COMPANY_NAME  = "Infosys"   # change this to scrape any other company
-MAX_RESULTS   = 8           # DuckDuckGo results per query
-SUMMARY_LINES = 3           # sentences per article summary
-REQUEST_DELAY = 1.5         # seconds between requests
-PDF_FOLDER    = "infosys_pdfs"
-CSV_OUTPUT    = "infosys_data.csv"
+COMPANY_NAME       = "Infosys"   # change to scrape any other company
+MAX_RESULTS        = 8           # DuckDuckGo results per query
+SUMMARY_LINES      = 3           # sentences per summary
+REQUEST_DELAY      = 1.5         # seconds between page requests
+QUERY_DELAY        = 4.0         # seconds between DDG queries
+CREDENTIALS_FILE   = "credentials.txt"
 ```
-
-To scrape a different company, change `COMPANY_NAME` and update `SEARCH_QUERIES` accordingly.
 
 ---
 
-## Filtering Logic
+## Selenium Login
 
-### Blocked domains (never scraped)
-Social media, video platforms, and messaging apps are skipped entirely:
-`youtube.com`, `twitter.com`, `x.com`, `t.me`, `reddit.com`, `facebook.com`, `instagram.com`, `google.com/finance`, `scribd.com`
+The scraper attempts to log into **Economic Times** automatically using Selenium before scraping begins.
 
-### Trusted PDF domains (only these can serve PDFs)
-To prevent downloading unrelated PDFs (e.g. NVIDIA reports from financial comparison sites):
-`moneycontrol.com`, `bseindia.com`, `nseindia.com`, `infosys.com`, `sebi.gov.in`
+- Runs in **headless mode** — no browser window opens
+- Cookies extracted from browser and injected into `requests.Session`
+- ChromeDriver installs automatically via `webdriver-manager`
+- If login fails or credentials are missing, ET pages are scraped without authentication — the rest of the scraper is unaffected
 
-### Quality checks (applied after scraping)
-- **Minimum 50 words** of body text — filters out JS-rendered empty pages, login walls, and homepages
-- **Must mention "Infosys"** — filters out irrelevant pages that happened to appear in results
-- **PDF links must mention "Infosys"** in their URL or anchor text — prevents downloading generic legal/disclaimer PDFs
+> **Note:** Economic Times may require OTP verification depending on account settings, in which case the login silently falls back to unauthenticated scraping.
 
 ---
 
@@ -138,17 +159,22 @@ To prevent downloading unrelated PDFs (e.g. NVIDIA reports from financial compar
 | Library | Purpose |
 |---------|---------|
 | `ddgs` | DuckDuckGo search — no API key needed |
-| `requests` | HTTP requests to fetch pages and PDFs |
-| `beautifulsoup4` | Parse HTML, extract text and links |
-| `sumy` | Extractive text summarization using LSA algorithm |
-| `lxml` | Fast HTML parser used by BeautifulSoup |
-| `nltk` | Sentence tokenizer required by sumy |
+| `requests` | Fetch pages and PDFs |
+| `beautifulsoup4` | Parse HTML and extract content |
+| `sumy` + `nltk` | LSA extractive summarization |
+| `lxml` | Fast HTML parser |
+| `selenium` | Automate browser login for Economic Times |
+| `webdriver-manager` | Auto-installs ChromeDriver |
 
 ---
 
 ## Known Limitations
 
-- **JS-rendered pages** — Sites like Trendlyne, Groww, and Investing.com load content via JavaScript. `requests` fetches the raw HTML before JS runs, so these pages return 0 words and are skipped. A browser automation tool like Selenium would be needed to scrape them.
-- **403 errors** — Infosys.com and Business Standard actively block scrapers. Their content is inaccessible without authentication or a headless browser.
-- **DuckDuckGo variability** — Results differ between runs. The same query may return different URLs on different days.
-- **Salary PDFs** — Annual reports hosted on NSE/BSE are very large. The summarizer caps input at 1000 words and has a 10-second timeout to avoid hanging.
+| Issue | Cause | Workaround |
+|-------|-------|------------|
+| Infosys.com returns 403 on all pages | Cloudflare bot protection | None — not scrapeable |
+| Business Standard returns 403 | Cloudflare + paid subscription | None |
+| Trendlyne, Groww, Investing.com return 0 words | JavaScript-rendered pages | Would need Selenium to render |
+| ET login may not fully authenticate | Possible OTP requirement on account | Use a password-only ET account |
+| LiveMint login not supported | OTP-only login, cannot be automated | Scraped unauthenticated (most articles are public) |
+| DuckDuckGo results vary per run | DDG rotates results | Expected behaviour — run produces different URLs each time |
